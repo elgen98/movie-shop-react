@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  padding: 0px 20px;
+  background-color: #030973;
+  .header-main {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-right: auto;
+    nav > a {
+      margin: 10px;
+      text-decoration: none;
+    }
+  }
+  .search-bar {
+    input {
+      background-color: #73706c;
+    }
+    display: flex;
+    align-items: center;
+  }
+}
