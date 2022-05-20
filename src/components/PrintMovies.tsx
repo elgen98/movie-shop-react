@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import IMovie from "../models/IMovie";
 import MovieService from "../services/MovieService";
-import "./PrintMovies.scss";
+import { ShowMovie } from "./ShowMovie";
 
 export default function PrintMovies() {
   const [movies, setMovies] = useState<IMovie[]>([]);
@@ -22,10 +22,8 @@ export default function PrintMovies() {
 
   let html = movies.map((movie) => {
     return (
-      <div className="movie-container" key={movie.id}>
-        <h2>{movie.name}</h2>
-        <img src={movie.imageUrl} alt="Movie Poster" width={300} />
-        <h4>{movie.price} kr</h4>
+      <div key={movie.id}>
+        <ShowMovie movie={movie} key={movie.id} />
       </div>
     );
   });

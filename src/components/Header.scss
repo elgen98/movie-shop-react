@@ -1,15 +1,52 @@
 header {
   display: flex;
   padding: 0px 20px;
-  background-color: #030973;
-  .header-main {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+  background-color: #0d0d0d;
+  .header-logotype {
     margin-right: auto;
-    nav > a {
-      margin: 10px;
+    color: #f27b35;
+  }
+  .navBar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    button {
+      position: fixed;
+      z-index: 10;
+      cursor: pointer;
+      background-color: #0d0d0d;
+      border: none;
+      border-radius: 5px;
+    }
+    .menuButton {
+      background-color: #f27b35;
+    }
+    .menuNav {
+      overflow-y: scroll;
+      list-style: none;
+      position: fixed;
+      top: 7px;
+      background: #f27b35;
+      height: 100%;
+      overflow: hidden;
+      max-width: 80vw;
+      z-index: 9;
+      display: none;
+    }
+    .menuNav.showMenu {
+      display: block;
+      width: 100%;
+    }
+    a {
+      display: block;
+      padding: 10px 40px;
       text-decoration: none;
+      color: #f2e313;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .menuNav li:first-child {
+      margin-top: 5rem;
     }
   }
   .search-bar {
